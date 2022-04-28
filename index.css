@@ -1,0 +1,200 @@
+body {
+    padding: 0px 128px;
+}
+@font-face {
+    font-family: spartan-bold;
+    src: url('src/assets/Spartan/static/Spartan-Bold.ttf');
+  }
+@font-face {
+    font-family: spartan-regular;
+    src: url('src/assets/Spartan/static/Spartan-Regular.ttf');
+}
+@font-face {
+    font-family: spartan-semiBold;
+    src: url('src/assets/Spartan/static/Spartan-SemiBold.ttf');
+}
+.main{
+    display: grid;
+    grid-template-rows: fit-content(100%) 1fr;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+    flex-direction: column;
+    
+}
+.navegacao{
+    text-align: center;
+}
+.div-new{
+    display: grid;
+    align-items: end;
+    justify-content: end;
+}
+.btn-new{
+    background-color: #429E97;
+    padding: 0px 16px;
+    border-radius: 5px;
+    color: #FFF;
+    border: none;
+    font-size: 14px;
+    height: 40px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: spartan-semiBold;
+    color: #343A40;
+}
+.menu{
+    margin-top: 24px;
+}
+.opcao{
+    font-family: spartan-regular;
+    margin-left: 24px;
+    color: #343A40;
+}
+.entradas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #EEF5F5;
+    padding: 24px;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    height: 100%;
+    row-gap: 12px;
+}
+.card{
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 7px;
+    background-color: #FFF;
+    padding: 10px 16px;
+}
+.info{
+    display: grid;
+    row-gap: 4px;
+}
+.titulo{
+    font-size: 14px;
+    font-family: spartan-semiBold;
+    color: #343A40;
+}
+.data{
+    font-size: 10px;
+    font-family: spartan-regular;
+    color: #343A40;
+}
+.valor{
+    font-size: 14px;
+    font-family: spartan-semiBold;
+    color: #429E97;
+}
+
+.circle svg path{
+    fill:#429E97
+}
+.modal{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.area-modal{
+    background-color: #FFF;
+    padding: 32px;
+    border-radius: 9px;
+    display: grid;
+    text-align: center;
+    row-gap: 24px;
+    z-index: 12;
+    animation: slideIn 0.5s forwards;
+}
+.titulo-modal{
+    font-size: 20px;
+    font-family: spartan-bold;
+}
+.container-tipo{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+.label{
+    font-family: spartan-semiBold;
+    font-size: 14px
+}
+.active{
+    background-color: #429E97;
+    color: #FFF;
+    padding: 10px 16px;
+    border-radius: 9px;
+    font-family: spartan-regular;
+    border: 1px solid #429E97;
+    transition: 0.3s;
+}
+.disable{
+    border-radius: 9px;
+    border: 1px solid #EEF5F5;
+    padding: 10px 16px;
+    color: #A5CACA;
+    font-family: spartan-regular;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.div-tipo{
+    display: grid;
+    row-gap: 16px;
+}
+.invisivel{
+    display: none;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    position: absolute;
+    animation: showIn 0.5s forwards;
+    background-color: rgba(238, 245, 245, 0.5);
+}
+@keyframes showIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        margin-left: 50px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header{
+        grid-template-columns: 1fr fit-content(100%) 1fr;
+    }
+}
